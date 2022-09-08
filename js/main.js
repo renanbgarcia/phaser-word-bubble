@@ -10,6 +10,8 @@ var config = {
             gravity: { y: 0 }
         }
     },
+    antialising: false,
+    pixelArt: true,
     // scale: {
     //     mode: Phaser.Scale.FIT,
     //     autoCenter: Phaser.Scale.CENTER_BOTH
