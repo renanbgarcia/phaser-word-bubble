@@ -1,4 +1,6 @@
 import Level1 from "./scenes/level1.js";
+import Home from "./scenes/home.js";
+import GameOver from "./scenes/over.js";
 
 var config = {
     type: Phaser.AUTO,
@@ -16,7 +18,7 @@ var config = {
     //     mode: Phaser.Scale.FIT,
     //     autoCenter: Phaser.Scale.CENTER_BOTH
     // },
-    scene: Level1,
+    scene: [Home, Level1, GameOver ],
     backgroundColor: 0x9F9060
 };
 
