@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <!-- <style>
+
+<head>
+    <style>
         @font-face {
             font-family: 'Grobold';
             src: url('assets/GROBOLD.ttf');
@@ -9,13 +11,15 @@
             font-family: 'Avocado Days';
             src: url('assets/Avocado Days.ttf');
         }
-    </style> -->
-<head>
-    <script src="js/phaser.min.js"></script>
-    <script type="module" src="js/main.js"></script>
+    </style>
+    <link rel="preload" as="font" href="assets/GROBOLD.ttf" type="font/ttf" />
+    <link rel="preload" as="font" href="assets/Avocado Days.ttf" type="font/ttf" />
 </head>
 
 <body>
-
+    <span style="font-family: Grobold; height: 0px; opacity: 0; position: absolute;">HAHAHA</span>
+    <span style="font-family: Avocado Days; height: 0px; opacity: 0; position: absolute;">HAHAHA</span>
+    <script src="js/phaser.min.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

@@ -11,7 +11,6 @@ export default class Level1 extends Phaser.Scene{
     }
 
     preload(){
-        this.load.script('webfont', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js');
         this.load.image("ball", "assets/ball.png");
         this.load.image("bullet", "assets/bullet.png");
         this.load.image("bomb", "assets/bomb.png");
@@ -45,17 +44,6 @@ export default class Level1 extends Phaser.Scene{
 
     create(){
 
-        WebFont.load({
-            google: {
-                families: [ 'Freckle Face', 'Finger Paint' ]
-            },
-            active: function ()
-            {
-                this.displayText = this.add.text(380, 50, this.theWord, { fontFamily: 'Freckle Face' });
-                this.displayLives = this.add.text(100, 50, "VIDAS: " + this.lives, { fontFamily: 'Finger Paint' });
-            }
-        });
-
         this.player = this.physics.add.sprite(400, 500, 'ball');
         this.player.setCollideWorldBounds(true);
         this.player.body.onWorldBounds = true;
@@ -69,8 +57,8 @@ export default class Level1 extends Phaser.Scene{
             this.scene.bullets.create(this.scene.player.x, this.scene.player.y, "bullet").setVelocityY(-200);
         });
 
-        // this.displayText = this.add.text(380, 50, this.theWord, { fontFamily: 'Avocado Days' });
-        // this.displayLives = this.add.text(100, 50, "VIDAS: " + this.lives, { fontFamily: 'Grobold' });
+        this.displayText = this.add.text(320, 50, this.theWord, { fontFamily: 'Avocado Days', fontSize: '50px' });
+        this.displayLives = this.add.text(100, 50, "VIDAS: " + this.lives, { fontFamily: 'Grobold', fontSize: '30px' });
 
         this.letter1 = this.physics.add.image(200, 250, this.theletter).setImmovable().setData("isCorrect", true);
         this.letter2 = this.physics.add.image(630, 250, this.chooseRandomLetter()).setImmovable().setData("isCorrect", false);
